@@ -1,26 +1,24 @@
 ## raspberry pi skywriter
 
-_currently customized file 현재 사용할 파일_
+##### currently customized file 현재 사용할 파일
 
-examples
-|
-|____ test.py
+> examples 폴더
+>> test.py 파일
 
-
-_raspberry linux command 라즈베리 리눅스 커맨드_
+##### raspberry linux command 라즈베리 리눅스 커맨드
 
 ```bash
 $ python3 test.py
 ```
 
-_주의사항_
+##### 주의사항
 
 In test.py, you should change the variable *broker_address* depend on where you're running your mosca broker. 
 
 test.py에 있는 broker_address 변수: 모스카 브로커를 돌리고 있는 ip address 값으로 변경해야 한다.
 
 
-_mosca broker 모스카 브로커_
+##### mosca broker 모스카 브로커
 
 ```bash
 $ mosca -v | pino
@@ -42,7 +40,7 @@ $ lsof -i:1883
 //참고로 1883은 mosca 기본 port
 ```
 
-_프로세스 순서 (커맨드 터미널은 다 다른 location)_
+##### 프로세스 순서 (커맨드 터미널은 다 다른 location)
 
 ```bash
 $ killall -9 node
