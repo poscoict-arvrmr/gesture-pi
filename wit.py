@@ -19,18 +19,18 @@ def wit():
 
     try:
         speech = r.recognize_wit(audio, key = WIT_KEY)
-        if speech == "설정 페이지" or "설정 화면 보여줘" or "환경 설정" or "마지막 페이지" :
+        if speech == "설정 페이지" :
             client.publish("voice/command", "설정")
             print("Wit thinks you said" + speech)
-        elif speech == "카메라 페이지" or "카메라 보여줘" or "카메라 화면" or "세번째 페이지":
+        elif speech == "카메라 페이지":
             client.publish("voice/command", "카메라")
         elif speech == "파일 페이지" :
             client.publish("voice/command", "파일")
-        elif speech == "그전 페이지" or "이전 페이지" or "그 전꺼" :
+        elif speech == "이전 페이지":
             client.publish("voice/command", "이전메뉴")
-        elif speech == "다음 페이지" or "다음 화면" or "그 다음" :
+        elif speech == "다음 페이지":
             client.publish("voice/command", "다음메뉴")
-        elif speech == "사진 찍어줘" :
+        elif speech == "사진 찍어 줘" or "사진 찍어줘" :
             client.publish("voice/command", "사진")
         elif speech == "동영상 촬영 시작해줘" :
             client.publish("voice/command", "영상시작")
